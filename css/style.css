@@ -1,0 +1,989 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: #f7f8f9;
+    font-family: "Google Sans", system-ui, sans-serif;
+    overflow-x: visible;
+}
+
+.page {
+    position: relative;
+    width: 1440px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 22px;
+    padding-left: 90px;
+    padding-right: 90px;
+    overflow-x: hidden;
+}
+
+/* Figma Button: 127×30, 11px, underline, arrow */
+.side-nav {
+    position: fixed;
+    left: 35px;
+    top: 123px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    width: 127px;
+    overflow: visible;
+    pointer-events: auto;
+}
+
+.side-nav a,
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    color: #233f7c;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-decoration: none;
+    border-bottom: 1px solid #233f7c;
+}
+
+.side-nav a::after,
+.nav-link::after {
+    content: "↗";
+    font-size: 8px;
+    line-height: 1;
+}
+
+main,
+footer {
+    position: relative;
+    z-index: 0;
+}
+
+main {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+/* Foreground sidebar: covers section art and ends at the footer's hairline. */
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -90px;
+    width: 198px;
+    background: #f7f8f9;
+    border-right: 1px solid #fdbb16;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hero {
+    position: relative;
+    height: 620px;
+    min-height: 620px;
+    margin-left: -90px;
+    margin-right: -90px;
+}
+
+.section-tag {
+    position: absolute;
+    left: 197px;
+    top: 254px;
+    width: 85px;
+    margin: 0;
+    color: #fdbb16;
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.hero-photo {
+    position: absolute;
+    left: 901px;
+    top: 86px;
+    width: 449px;
+    height: 449px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.hero-title {
+    position: absolute;
+    left: 304px;
+    top: 67px;
+    width: 513px;
+    margin: 0;
+    color: #233f7c;
+    font-family: "Momo Trust Display", Georgia, serif;
+    font-size: 92px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.hero-kicker {
+    position: absolute;
+    left: 616px;
+    top: 318px;
+    width: 200.5px;
+    margin: 0;
+    color: #127bbe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.quote {
+    position: absolute;
+    left: 359px;
+    top: 387px;
+    width: 457px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.quote p {
+    margin: 0;
+    width: 100%;
+    color: #000;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.quote .accent {
+    color: #fdbb16;
+}
+
+.quote::before,
+.quote::after {
+    content: "";
+    flex-shrink: 0;
+    width: 16.5px;
+    height: 16.5px;
+    border: 2px solid #fdbb16;
+}
+
+.quote::before {
+    border-right: 0;
+    border-bottom: 0;
+    }
+
+.quote::after {
+    align-self: flex-end;
+    border-left: 0;
+    border-top: 0;
+}
+
+.ornament {
+    position: absolute;
+    left: 303px;
+    top: 535px;
+    width: 106px;
+    height: 55px;
+    background-color: #233f7c;
+    -webkit-mask: url("../asset/Motif.svg") center / contain no-repeat;
+    mask: url("../asset/Motif.svg") center / contain no-repeat;
+}
+
+.cta {
+    position: relative;
+    height: 763px;
+    min-height: 763px;
+    margin-left: -90px;
+    margin-right: -90px;
+}
+
+.cta-photo {
+  position: absolute;
+  left: 197px;
+  top: 0;
+  width: 1243px;
+  height: 705px;
+  overflow: hidden;
+}
+
+.cta-photo img {
+  position: absolute;
+  left: 0;
+  top: -22.62%;
+  width: 100%;
+  height: 122.6%;
+  object-fit: cover;
+}
+
+.cta-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.cta-fade-top,
+.cta-fade-bottom {
+  position: absolute;
+  left: 197px;
+  width: 1243px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-fade-top {
+  top: 0;
+  height: 71px;
+  background: linear-gradient(#f7f8f9, rgba(247, 248, 249, 0));
+}
+
+.cta-fade-bottom {
+  top: 582px;
+  height: 123px;
+  background: linear-gradient(rgba(247, 248, 249, 0), #f7f8f9);
+}
+
+.cta-tag {
+  top: 71px;
+  z-index: 2;
+}
+
+.cta-motifs {
+  position: absolute;
+  left: 389px;
+  top: 78px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cta-motifs img {
+  display: block;
+  width: 106px;
+  height: 55px;
+}
+
+.cta-title {
+  position: absolute;
+  left: 956px;
+  top: 88px;
+  width: 394px;
+  margin: 0;
+  color: #f7f8f9;
+  font-family: "Momo Trust Display", Georgia, serif;
+  font-size: 69px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: right;
+  z-index: 2;
+}
+
+.cta-quote {
+  position: absolute;
+  left: 252px;
+  top: 502px;
+  width: 564px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  z-index: 2;
+}
+
+.cta-quote p {
+  margin: 0;
+  width: 100%;
+  color: #f7f8f9;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.cta-quote .accent {
+  color: #fdbb16;
+}
+
+.cta-quote::before,
+.cta-quote::after {
+  content: "";
+  flex-shrink: 0;
+  width: 16.5px;
+  height: 16.5px;
+  border: 2px solid #fdbb16;
+}
+
+.cta-quote::before {
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.cta-quote::after {
+  align-self: flex-end;
+  border-left: 0;
+  border-top: 0;
+}
+
+.cta-more {
+  position: absolute;
+  left: 945px;
+  top: 528px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 405px;
+  height: 30px;
+  color: #f7f8f9;
+  font-size: 11px;
+  line-height: 1.2;
+  text-decoration: none;
+  border-bottom: 1px solid #fdbb16;
+  z-index: 2;
+}
+
+.cta-more::after {
+  content: "↗";
+  font-size: 8px;
+}
+.porto {
+  position: relative;
+  height: 879px;
+  min-height: 879px;
+  margin-left: -90px;
+  margin-right: -90px;
+  background: #f7f8f9;
+}
+
+.porto-title {
+  position: absolute;
+  left: 719px;
+  top: 78px;
+  margin: 0;
+  color: #233f7c;
+  font-family: "Momo Trust Display", Georgia, serif;
+  font-size: 69px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: right;
+  white-space: nowrap;
+  transform: translateX(-100%);
+}
+
+.porto-tag {
+  left: auto;
+  right: 90px;
+  top: 138px;
+  transform: none;
+  text-align: right;
+}
+
+.porto-cards {
+  position: absolute;
+  left: 327px;
+  top: 247px;
+  display: flex;
+  gap: 70px;
+}
+
+.porto-card {
+  display: block;
+  position: relative;
+  width: 251px;
+  height: 314px;
+  border: 2px solid #233f7c;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+.porto-card iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 328px;
+  height: 410px;
+  border: 0;
+  transform: translateX(-50%) scale(0.765);
+  transform-origin: top center;
+}
+
+.porto-quote {
+  position: absolute;
+  left: 495px;
+  top: 663px;
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.porto-quote p {
+  margin: 0;
+  width: 100%;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.porto-quote .accent {
+  color: #fdbb16;
+}
+
+.porto-quote::before,
+.porto-quote::after {
+  content: "";
+  flex-shrink: 0;
+  width: 16.5px;
+  height: 16.5px;
+  border: 2px solid #fdbb16;
+}
+
+.porto-quote::before {
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.porto-quote::after {
+  align-self: flex-end;
+  border-left: 0;
+  border-top: 0;
+}
+
+.porto-motif {
+  position: absolute;
+  left: 305px;
+  width: 106px;
+  height: 55px;
+  background-color: #233f7c;
+  -webkit-mask: url("../asset/Motif.svg") center / contain no-repeat;
+  mask: url("../asset/Motif.svg") center / contain no-repeat;
+}
+
+.porto-motif--top {
+  top: 0;
+}
+
+.porto-motif--bottom {
+  bottom: 50px;
+}
+
+.cta2 {
+  position: relative;
+  height: 620px;
+  min-height: 620px;
+  margin-left: -90px;
+  margin-right: -90px;
+  overflow: hidden;
+}
+
+.cta2-photo {
+  position: absolute;
+  left: 197px;
+  top: 0;
+  width: 1243px;
+  height: 705px;
+  overflow: hidden;
+}
+
+.cta2-photo img {
+  position: absolute;
+  left: 0.04%;
+  top: -31.9%;
+  width: 100%;
+  height: 122.6%;
+  max-width: none;
+}
+
+.cta2-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.cta2-fade-top {
+  position: absolute;
+  left: 197px;
+  top: 0;
+  width: 1243px;
+  height: 98px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(#f7f8f9, rgba(247, 248, 249, 0));
+}
+
+.cta2-tag {
+    top: 43px;
+    z-index: 2;
+}
+
+.cta2-motifs {
+    position: absolute;
+    left: 411px;
+    top: 43px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.cta2-motifs img {
+    display: block;
+    width: 106px;
+    height: 55px;
+}
+
+.cta2-title {
+    position: absolute;
+    right: 90px;
+    top: 62px;
+    margin: 0;
+    color: #f7f8f9;
+    font-family: "Momo Trust Display", Georgia, serif;
+    font-size: 92px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: right;
+    z-index: 2;
+}
+
+.cta2-quote {
+    position: absolute;
+    left: 252px;
+    top: 502px;
+    width: 564px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    z-index: 2;
+}
+
+.cta2-quote p {
+    margin: 0;
+    width: 100%;
+    color: #f7f8f9;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.cta2-quote .accent {
+    color: #fdbb16;
+}
+
+.cta2-quote::before,
+.cta2-quote::after {
+    content: "";
+    flex-shrink: 0;
+    width: 16.5px;
+    height: 16.5px;
+    border: 2px solid #fdbb16;
+}
+
+.cta2-quote::before {
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.cta2-quote::after {
+    align-self: flex-end;
+    border-left: 0;
+    border-top: 0;
+}
+
+.cta2-more {
+    position: absolute;
+    left: 945px;
+    top: 528px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 405px;
+    height: 30px;
+    color: #f7f8f9;
+    font-size: 11px;
+    line-height: 1.2;
+    text-decoration: none;
+    border-bottom: 1px solid #fdbb16;
+    z-index: 2;
+}
+
+.cta2-more::after {
+    content: "↗";
+    font-size: 8px;
+}
+
+/* full-bleed so the yellow rail meets the footer hairline (Figma x=197) */
+footer {
+    position: relative;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    min-height: 226px;
+    margin-left: -90px;
+    margin-right: -90px;
+    background: #f7f8f9;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 197px;
+    right: 0;
+    height: 1px;
+    background: #fdbb16;
+}
+
+.wordmark {
+    position: absolute;
+    left: 282px;
+    top: 82px;
+    width: 213px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.footer-contact {
+    position: absolute;
+    left: 624px;
+    top: 73px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    list-style: none;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #025ca1;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.footer-contact svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.footer-contact a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-motif {
+    position: absolute;
+    left: 1243px;
+    top: 163px;
+    width: 106px;
+    height: 63px;
+    background-color: #233f7c;
+    -webkit-mask: url("../asset/Motif.svg") center / contain no-repeat;
+    mask: url("../asset/Motif.svg") center / contain no-repeat;
+}
+
+.side-nav a,
+.cta-more,
+.cta2-more,
+.footer-contact a,
+.porto-card {
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.side-nav a:hover,
+.side-nav a:focus-visible {
+    color: #127bbe;
+    border-bottom-color: #fdbb16;
+}
+
+.side-nav a:active {
+    color: #fdbb16;
+}
+
+.cta-more:hover,
+.cta-more:focus-visible,
+.cta2-more:hover,
+.cta2-more:focus-visible,
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
+    color: #fdbb16;
+}
+
+.cta-more,
+.cta2-more {
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+}
+
+.porto-card:hover,
+.porto-card:focus-visible {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(35, 63, 124, 0.2);
+}
+
+/* Fluid layout below the 1440px Figma artboard; desktop artwork stays intact. */
+@media (max-width: 1439px) {
+  .page {
+    --gutter: clamp(20px, 3vw, 48px);
+    --content-inset: 230px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    overflow: visible;
+  }
+
+  main::before {
+    left: 0;
+    width: 198px;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px 40px;
+    min-height: 226px;
+    margin: 0;
+    padding: 41px var(--gutter) 41px var(--content-inset);
+  }
+
+  footer::before { left: 197px; }
+
+  .wordmark,
+  .footer-contact,
+  .footer-motif {
+    position: static;
+    inset: auto;
+    margin: 0;
+  }
+
+  .wordmark { width: 180px; height: auto; }
+  .footer-contact { min-width: 0; }
+  .footer-contact a { overflow-wrap: anywhere; }
+  .footer-motif { margin-left: auto; flex-shrink: 0; }
+
+  .hero {
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px clamp(24px, 3vw, 44px);
+    padding: 48px var(--gutter) 56px var(--content-inset);
+    align-items: start;
+  }
+
+  .hero .section-tag,
+  .hero-title,
+  .hero-kicker,
+  .hero-photo,
+  .hero .quote,
+  .hero .ornament {
+    position: relative;
+    inset: auto;
+    min-width: 0;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    text-align: left;
+  }
+
+  .hero .section-tag { grid-area: tag; }
+  .hero-title {
+    grid-area: title;
+    font-size: clamp(32px, 4.6vw, 72px);
+  }
+  .hero-kicker { grid-area: kicker; font-size: 16px; }
+  .hero .quote { grid-area: quote; }
+  .hero .quote p { margin: 0; line-height: 1.5; text-align: left; }
+  .hero .ornament { grid-area: motif; width: 106px; height: 55px; }
+  .hero-photo {
+    grid-area: photo;
+    align-self: center;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  .hero { grid-template-areas: "tag photo" "title photo" "kicker photo" "quote photo" "motif photo"; }
+
+  .porto {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 48px var(--gutter) 56px var(--content-inset);
+  }
+
+  .porto-title,
+  .porto-tag,
+  .porto-cards,
+  .porto-quote,
+  .porto-motif {
+    position: static;
+    inset: auto;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  .porto-title { font-size: clamp(40px, 5vw, 69px); text-align: left; white-space: normal; }
+  .porto-tag { text-align: left; }
+  .porto-motif { width: 106px; height: 55px; }
+  .porto-quote { width: min(535px, 100%); align-self: center; }
+  .porto-quote p { line-height: 1.5; text-align: left; }
+  .porto-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+  .porto-card { max-width: 100%; }
+
+  .cta,
+  .cta2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    height: auto;
+    min-height: 560px;
+    margin: 0;
+    padding: 48px var(--gutter) 48px var(--content-inset);
+    overflow: hidden;
+  }
+
+  .cta-photo,
+  .cta2-photo {
+    inset: 0 0 0 198px;
+    width: auto;
+    height: 100%;
+  }
+
+  .cta-photo img,
+  .cta2-photo img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cta-photo::after,
+  .cta2-photo::after {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .65));
+  }
+
+  .cta-fade-top,
+  .cta-fade-bottom,
+  .cta2-fade-top,
+  .cta-motifs,
+  .cta2-motifs { display: none; }
+
+  .cta-tag,
+  .cta2-tag,
+  .cta-title,
+  .cta2-title,
+  .cta-quote,
+  .cta2-quote,
+  .cta-more,
+  .cta2-more {
+    position: relative;
+    inset: auto;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+    text-align: left;
+  }
+
+  .cta-title,
+  .cta2-title { font-size: clamp(40px, 6vw, 72px); margin-bottom: auto; }
+  .cta-quote,
+  .cta2-quote { width: min(564px, 100%); }
+  .cta-quote p,
+  .cta2-quote p { line-height: 1.5; text-align: left; }
+  .cta-more,
+  .cta2-more { width: min(405px, 100%); min-height: 44px; font-size: 12px; }
+}
+
+@media (max-width: 900px) {
+  html { scroll-padding-top: 85px; }
+
+  .page {
+    --content-inset: var(--gutter);
+    padding-top: 65px;
+  }
+
+  main::before { display: none; }
+
+  .side-nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 65px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: #f7f8f9;
+    border-bottom: 1px solid #fdbb16;
+  }
+
+  .side-nav a {
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    justify-content: center;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  footer::before { left: var(--gutter); }
+}
+
+@media (max-width: 600px) {
+  .page { --gutter: 20px; }
+  footer { align-items: flex-start; gap: 24px; }
+  .footer-contact { flex-basis: 100%; }
+  .footer-contact li { font-size: 16px; }
+  .footer-motif { margin-left: 0; }
+}
+
+@media (max-width: 900px) {
+  .cta-photo,
+  .cta2-photo { left: 0; }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "tag" "title" "kicker" "photo" "quote" "motif";
+    padding-top: 32px;
+    gap: 24px;
+  }
+  .hero-title { font-size: clamp(36px, 10vw, 64px); }
+  .hero-photo { max-width: 449px; justify-self: center; }
+  .hero .quote p,
+  .cta-quote p,
+  .cta2-quote p,
+  .porto-quote p { font-size: 16px; }
+  .porto-motif { display: none; }
+}

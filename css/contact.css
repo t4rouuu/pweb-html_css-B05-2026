@@ -1,0 +1,748 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: #f7f8f9;
+  overflow-x: visible;
+}
+
+body {
+  color: #233f7c;
+  font-family: "Google Sans", Inter, "Segoe UI", sans-serif;
+  line-height: 1.2;
+}
+
+.page {
+  position: relative;
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.side-nav {
+  position: fixed;
+  left: 35px;
+  top: 123px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  width: 127px;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+.side-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  color: #233f7c;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  border-bottom: 1px solid #233f7c;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.side-nav a::after {
+  content: "↗";
+  font-size: 8px;
+  line-height: 1;
+}
+
+.side-nav a:hover,
+.side-nav a:focus-visible {
+  color: #127bbe;
+  border-bottom-color: #fdbb16;
+}
+
+.side-nav a:active {
+  color: #fdbb16;
+}
+
+main,
+footer {
+  position: relative;
+  z-index: 0;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 198px;
+  background: #f7f8f9;
+  border-right: 1px solid #fdbb16;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.accent {
+  color: #fdbb16;
+}
+
+/* ---------- Hero (Figma 19:9636) ---------- */
+
+.hero {
+  position: relative;
+  height: 848px;
+  min-height: 848px;
+}
+
+.hero .section-tag {
+  position: absolute;
+  left: 1257px;
+  top: 67px;
+  width: 85px;
+  margin: 0;
+  color: #fdbb16;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  z-index: 11;
+}
+
+.hero-title {
+  position: absolute;
+  left: 304px;
+  top: 67px;
+  width: 513px;
+  margin: 0;
+  color: #233f7c;
+  font-family: "Momo Trust Display", Georgia, serif;
+  font-size: 92px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.quote {
+  position: absolute;
+  left: 985px;
+  top: 173px;
+  width: 365px;
+  height: 103px;
+  box-sizing: border-box;
+}
+
+.quote p {
+  margin: 26px 0 0;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.quote::before,
+.quote::after,
+.form-quote::before,
+.form-quote::after {
+  content: "";
+  position: absolute;
+  width: 16.5px;
+  height: 16.5px;
+  border: 2px solid #fdbb16;
+}
+
+.quote::before,
+.form-quote::before {
+  top: 0;
+  left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.quote::after,
+.form-quote::after {
+  right: 0;
+  bottom: 0;
+  border-left: 0;
+  border-top: 0;
+}
+
+.ornament--hero {
+  position: absolute;
+  left: 304px;
+  top: 369px;
+  width: 106px;
+  height: 55px;
+  background-color: #233f7c;
+  -webkit-mask: url("../asset/Motif.svg") center / contain no-repeat;
+  mask: url("../asset/Motif.svg") center / contain no-repeat;
+}
+
+.hero-photo {
+  position: absolute;
+  left: 304px;
+  top: 465px;
+  width: 1046px;
+  height: 297px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  position: absolute;
+  left: 0;
+  top: -43.91%;
+  width: 100%;
+  height: 198.11%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* ---------- Form (Figma 19:9669) ---------- */
+
+.form-section {
+  position: relative;
+  height: 620px;
+  min-height: 620px;
+  background: #f7f8f9;
+}
+
+.form-visual {
+  position: absolute;
+  left: 197px;
+  top: 0;
+  width: 618px;
+  height: 620px;
+  overflow: visible;
+}
+
+.form-photo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.form-photo img {
+  position: absolute;
+  left: -6.63%;
+  top: 0;
+  width: 175.92%;
+  height: 131.4%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 70% 20%;
+}
+
+.form-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.form-title {
+  position: absolute;
+  left: 85px;
+  top: 27px;
+  width: 405px;
+  margin: 0;
+  color: #f7f8f9;
+  font-family: "Momo Trust Display", Georgia, serif;
+  font-size: 69px;
+  font-weight: 400;
+  line-height: 1.2;
+  z-index: 2;
+}
+
+.form-tag {
+  position: absolute;
+  left: 534px;
+  top: 112px;
+  width: 85px;
+  margin: 0;
+  color: #fdbb16;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  z-index: 2;
+}
+
+.form-contact {
+  position: absolute;
+  left: 164px;
+  top: 509px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style: none;
+}
+
+.form-contact li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #f7f8f9;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.form-contact svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.form-contact a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.form-contact a:hover,
+.form-contact a:focus-visible {
+  color: #fdbb16;
+}
+
+.form-motif {
+  position: absolute;
+  left: 448px;
+  top: 533px;
+  width: 106px;
+  height: 55px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.contact-form {
+  position: absolute;
+  left: 923px;
+  top: 0;
+  width: 427px;
+  height: 620px;
+}
+
+.form-quote {
+  position: absolute;
+  left: 0;
+  top: 94px;
+  width: 427px;
+  height: 103px;
+  margin: 0;
+}
+
+.form-quote p {
+  margin: 26px 0 0;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: justify;
+}
+
+.form-field {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 427px;
+  height: 41px;
+  background: rgba(35, 61, 129, 0.1);
+  color: #233d81;
+}
+
+/* Keep an accessible label after the placeholder disappears during typing. */
+.field-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.form-field--name {
+  top: 275px;
+}
+
+.form-field--email {
+  top: 322px;
+}
+
+.form-field--phone {
+  top: 369px;
+}
+
+.form-field--message {
+  top: 416px;
+  height: 77px;
+}
+
+.form-field input,
+.form-field textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 8px 22px;
+  border: 0;
+  border-bottom: 1px solid #233d81;
+  border-radius: 0;
+  background: transparent;
+  color: #233d81;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.4;
+  resize: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: #233d81; opacity: 1; }
+
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+  outline: 2px solid #fdbb16;
+  outline-offset: 2px;
+}
+
+.form-field input:hover,
+.form-field textarea:hover,
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+  border-bottom-color: #fdbb16;
+}
+
+.submit-btn {
+  position: absolute;
+  left: 0;
+  top: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 427px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #233d81;
+  background: transparent;
+  color: #233d81;
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.submit-btn::after {
+  content: "↗";
+  font-size: 8px;
+}
+
+.submit-btn:hover,
+.submit-btn:focus-visible {
+  color: #fdbb16;
+  border-bottom-color: #fdbb16;
+}
+
+/* ---------- Footer (same as HOME) ---------- */
+
+footer {
+  position: relative;
+  min-height: 226px;
+  background: #f7f8f9;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 197px;
+  right: 0;
+  height: 1px;
+  background: #fdbb16;
+}
+
+.wordmark {
+  position: absolute;
+  left: 282px;
+  top: 82px;
+  width: 213px;
+  height: 62px;
+  object-fit: contain;
+}
+
+.footer-contact {
+  position: absolute;
+  left: 624px;
+  top: 73px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style: none;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #025ca1;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.footer-contact svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.footer-contact a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
+  color: #fdbb16;
+}
+
+.footer-motif {
+  position: absolute;
+  left: 1243px;
+  top: 163px;
+  width: 106px;
+  height: 63px;
+  background-color: #233f7c;
+  -webkit-mask: url("../asset/Motif.svg") center / contain no-repeat;
+  mask: url("../asset/Motif.svg") center / contain no-repeat;
+}
+
+/* Fluid layout below the 1440px Figma artboard; desktop artwork stays intact. */
+@media (max-width: 1439px) {
+  .page {
+    --gutter: clamp(20px, 3vw, 48px);
+    --content-inset: 230px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    overflow: visible;
+  }
+
+  main::before {
+    left: 0;
+    width: 198px;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px 40px;
+    min-height: 226px;
+    margin: 0;
+    padding: 41px var(--gutter) 41px var(--content-inset);
+  }
+
+  footer::before { left: 197px; }
+
+  .wordmark,
+  .footer-contact,
+  .footer-motif {
+    position: static;
+    inset: auto;
+    margin: 0;
+  }
+
+  .wordmark { width: 180px; height: auto; }
+  .footer-contact { min-width: 0; }
+  .footer-contact a { overflow-wrap: anywhere; }
+  .footer-motif { margin-left: auto; flex-shrink: 0; }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    grid-template-areas: "title tag" "title quote" "motif quote" "photo photo";
+    gap: 24px clamp(24px, 3vw, 48px);
+    height: auto;
+    min-height: 0;
+    padding: 48px var(--gutter) 56px var(--content-inset);
+  }
+
+  .hero .section-tag,
+  .hero-title,
+  .hero .quote,
+  .ornament--hero,
+  .hero-photo {
+    position: relative;
+    inset: auto;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .hero .section-tag { grid-area: tag; justify-self: end; }
+  .hero-title { grid-area: title; font-size: clamp(40px, 6vw, 80px); }
+  .hero .quote { grid-area: quote; align-self: start; }
+  .ornament--hero { grid-area: motif; width: 106px; height: 55px; }
+  .hero-photo { grid-area: photo; width: 100%; aspect-ratio: 1046 / 297; }
+  .hero-photo img { inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+
+  .hero .quote,
+  .form-quote { padding: 26px 0; }
+  .hero .quote p,
+  .form-quote p { margin: 0; line-height: 1.5; text-align: left; }
+
+  .form-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: clamp(24px, 3vw, 48px);
+    align-items: center;
+    height: auto;
+    min-height: 0;
+    padding: 24px var(--gutter) 56px var(--content-inset);
+  }
+
+  .form-visual {
+    position: relative;
+    inset: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto minmax(180px, 1fr) auto;
+    gap: 12px;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    min-height: 540px;
+    padding: clamp(20px, 2.5vw, 32px);
+    overflow: visible;
+  }
+
+  .form-photo img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 25% center;
+  }
+
+  .form-photo-overlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .25), transparent 45%, rgba(0, 0, 0, .65));
+  }
+
+  .form-title,
+  .form-tag,
+  .form-contact,
+  .form-motif {
+    position: relative;
+    inset: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    min-width: 0;
+  }
+
+  .form-title { grid-area: 1 / 1 / 2 / -1; font-size: clamp(32px, 3.6vw, 52px); }
+  .form-tag { grid-area: 2 / 1 / 3 / -1; justify-self: end; }
+  .form-contact { grid-area: 4 / 1; gap: 8px; }
+  .form-contact li { font-size: 14px; gap: 10px; }
+  .form-contact a { overflow-wrap: anywhere; }
+  .form-motif { grid-area: 4 / 2; align-self: end; width: 52px; }
+
+  .contact-form {
+    position: static;
+    inset: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .form-quote,
+  .form-field,
+  .submit-btn {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .form-quote { margin-bottom: 12px; }
+  .form-field input { min-height: 48px; }
+  .form-field textarea { min-height: 128px; resize: vertical; }
+  .submit-btn { min-height: 44px; font-size: 12px; }
+}
+
+@media (max-width: 900px) {
+  html { scroll-padding-top: 85px; }
+
+  .page {
+    --content-inset: var(--gutter);
+    padding-top: 65px;
+  }
+
+  main::before { display: none; }
+
+  .side-nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 65px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: #f7f8f9;
+    border-bottom: 1px solid #fdbb16;
+  }
+
+  .side-nav a {
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    justify-content: center;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  footer::before { left: var(--gutter); }
+}
+
+@media (max-width: 600px) {
+  .page { --gutter: 20px; }
+  footer { align-items: flex-start; gap: 24px; }
+  .footer-contact { flex-basis: 100%; }
+  .footer-contact li { font-size: 16px; }
+  .footer-motif { margin-left: 0; }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "tag" "title" "quote" "motif" "photo";
+    padding-top: 32px;
+  }
+  .hero .section-tag { justify-self: start; }
+  .hero-title { font-size: clamp(40px, 10vw, 64px); }
+  .hero-photo { aspect-ratio: 16 / 9; }
+  .hero .quote p,
+  .form-quote p { font-size: 16px; }
+  .form-section { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .form-visual { min-height: 480px; }
+}

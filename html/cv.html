@@ -3,172 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENO — CV</title>
+    <title>CV | SENO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Momo+Trust+Display&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="../css/cv.css">
 </head>
 <body>
-    <header class="hero">
-        <nav class="rail" aria-label="Primary">
-            <a class="nav-link" href="index.html">
-                <span>HOME</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-            <a class="nav-link" href="cv.html" aria-current="page">
-                <span>CV</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-            <a class="nav-link" href="contact.html">
-                <span>CONTACT</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-        </nav>
-
-        <p class="section-tag">{ HERO }</p>
-
-        <div class="hero-photo">
-            <img src="assets/hero.png" alt="Seno mascot flying in front of a campus building">
-        </div>
-
-        <div class="hero-copy">
-            <h1>Advancing<br>Humanity</h1>
+<nav class="side-nav" aria-label="Primary">
+    <a href="index.html">HOME</a>
+    <a href="cv.html" aria-current="page">CV</a>
+    <a href="contact.html">CONTACT</a>
+</nav>
+<div class="page">
+    <main>
+        <header class="hero">
+            <p class="section-tag">{ HERO }</p>
+            <h1 class="hero-title">Advancing<br>Humanity</h1>
             <p class="hero-kicker">Still one step at a time*</p>
             <div class="quote">
-                <img class="quote-mark quote-mark--tl" src="assets/corner.svg" alt="" width="17.5" height="17.5">
                 <p>The official version of me. Short, neat, and slightly impressive. I even have <span class="accent">awards</span> now. Cute.</p>
-                <img class="quote-mark quote-mark--br" src="assets/corner.svg" alt="" width="17.5" height="17.5">
             </div>
-            <img class="ornament ornament--hero" src="assets/ornament.svg" alt="">
-        </div>
-    </header>
-
-    <main class="about">
-        <nav class="rail" aria-label="Primary">
-            <a class="nav-link" href="index.html">
-                <span>HOME</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-            <a class="nav-link" href="cv.html" aria-current="page">
-                <span>CV</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-            <a class="nav-link" href="contact.html">
-                <span>CONTACT</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-        </nav>
-
-        <div class="about-left">
-            <h2>About<br>Me</h2>
-            <p class="section-tag section-tag--cv">{ CV }</p>
-
-            <h3>Education</h3>
-            <ul class="cv-list">
-                <li>
-                    <span class="cv-date">2022-2025</span>
-                    <span class="cv-title">SMAN 67 SURABAYA</span>
-                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
-                </li>
-                <li class="cv-list__tall">
-                    <span class="cv-date">2022-2025</span>
-                    <span class="cv-title">INSTITUT TEKNOLOGI<br>SEPULUH NOPEMBER</span>
-                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
-                </li>
-            </ul>
-
-            <h3 class="experience-heading">Experience</h3>
-            <ul class="cv-list">
-                <li class="cv-list__tall">
-                    <span class="cv-date">APR 2026-<br>NOW</span>
-                    <span class="cv-title">CAMPUS INFLUENCER</span>
-                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="about-center">
-            <div class="portrait">
-                <img src="assets/seno.png" alt="Portrait of Seno mascot">
+            <div class="ornament ornament--hero" aria-hidden="true"></div>
+            <div class="hero-photo">
+                <img src="assets/hero.png" alt="Seno mascot flying in front of a campus building">
             </div>
-            <h3 class="portrait-name">SENO</h3>
-            <div class="portrait-meta">
-                <span>+62 6767 6767 67</span>
-                <span class="portrait-meta__divider" aria-hidden="true"></span>
-                <span>Namaemail@gmail.com</span>
+        </header>
+
+        <section class="about">
+            <div class="about-left">
+                <h2>About<br>Me</h2>
+                <p class="section-tag section-tag--cv">{ CV }</p>
+
+                <h3>Education</h3>
+                <ul class="cv-list">
+                    <li>
+                        <span class="cv-date">2022-2025</span>
+                        <span class="cv-title">SMAN 67 SURABAYA</span>
+                    </li>
+                    <li class="cv-list__tall">
+                        <span class="cv-date">2022-2025</span>
+                        <span class="cv-title">INSTITUT TEKNOLOGI<br>SEPULUH NOPEMBER</span>
+                    </li>
+                </ul>
+
+                <h3 class="experience-heading">Experience</h3>
+                <ul class="cv-list">
+                    <li class="cv-list__tall">
+                        <span class="cv-date">APR 2026-<br>NOW</span>
+                        <span class="cv-title">CAMPUS INFLUENCER</span>
+                    </li>
+                </ul>
             </div>
-        </div>
 
-        <div class="about-right">
-            <h3>Skills</h3>
-            <ul class="cv-list">
-                <li>
-                    <span class="cv-title">PUBLIC COMMUNICATION</span>
-                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
-                </li>
-                <li>
-                    <span class="cv-title">COLLABORATION</span>
-                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
-                </li>
-                <li>
-                    <span class="cv-title">CAMPAIGN MESSAGING</span>
-                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
-                </li>
-            </ul>
+            <div class="about-center">
+                <div class="portrait">
+                    <img src="assets/seno.png" alt="Portrait of Seno mascot">
+                </div>
+                <h3 class="portrait-name">SENO</h3>
+                <div class="portrait-meta">
+                    <span>+62 6767 6767 67</span>
+                    <span class="portrait-meta__divider" aria-hidden="true"></span>
+                    <span>seno@its.ac.id</span>
+                </div>
+            </div>
 
-            <h3 class="awards-heading">Certification /<br>Awards</h3>
-            <ul class="cv-list cv-list--award">
-                <li>
-                    <span class="cv-title">Official Mascot</span>
-                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
-                    <p class="cv-note">Institut Teknologi Sepuluh Nopember, 2025</p>
-                </li>
-            </ul>
+            <div class="about-right">
+                <h3>Skills</h3>
+                <ul class="cv-list">
+                    <li>
+                        <span class="cv-title">PUBLIC COMMUNICATION</span>
+                    </li>
+                    <li>
+                        <span class="cv-title">COLLABORATION</span>
+                    </li>
+                    <li>
+                        <span class="cv-title">CAMPAIGN MESSAGING</span>
+                    </li>
+                </ul>
 
-            <img class="ornament ornament--about" src="assets/ornament.svg" alt="">
-        </div>
+                <h3 class="awards-heading">Certification /<br>Awards</h3>
+                <ul class="cv-list cv-list--award">
+                    <li>
+                        <span class="cv-title">OFFICIAL MASCOT</span>
+                        <p class="cv-note">Institut Teknologi Sepuluh Nopember, 2025</p>
+                    </li>
+                </ul>
+
+                <img class="ornament ornament--about" src="assets/ornament.svg" alt="">
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <nav class="rail" aria-label="Footer">
-            <a class="nav-link" href="index.html">
-                <span>HOME</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-            <a class="nav-link" href="cv.html" aria-current="page">
-                <span>CV</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-            <a class="nav-link" href="contact.html">
-                <span>CONTACT</span>
-                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-            </a>
-        </nav>
-
-        <img class="wordmark" src="assets/wordmark.png" alt="SENO">
-
+    <footer>
+        <img class="wordmark" src="../asset/Wordmark Satu Warna 3.png" alt="SENO">
         <ul class="footer-contact">
             <li>
-                <span class="footer-icon footer-icon--web"><img src="assets/icon-web.svg" alt="" width="13" height="13"></span>
+                <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><ellipse cx="8" cy="8" rx="3" ry="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M1.5 8h13M8 1.5c2 2.4 3 4.4 3 6.5s-1 4.1-3 6.5C6 12.1 5 10.1 5 8s1-4.1 3-6.5z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
                 <a href="https://www.its.ac.id">www.its.ac.id</a>
             </li>
             <li>
-                <span class="footer-icon footer-icon--phone"><img src="assets/icon-phone.svg" alt="" width="12.67" height="12.67"></span>
-                <a href="tel:+626767676767">+62 6767 6767 67</a>
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 2.8c.3-.6.9-.8 1.5-.6l1.6.6c.5.2.8.7.8 1.2v1.4c0 .4-.2.8-.5 1L5.4 7.5c.8 1.6 2.1 2.9 3.7 3.7l1.1-1.2c.3-.3.7-.5 1.1-.5h1.4c.5 0 1 .3 1.2.8l.6 1.6c.2.6 0 1.2-.6 1.5l-1.2.6c-3.4 1.6-7.3-.4-9.6-4.2C1.2 7.3 1.6 3.8 3.2 2.8z" fill="currentColor"/></svg>
+                <a href="tel:+626****6767">+62 6767 6767 67</a>
             </li>
             <li>
-                <span class="footer-icon footer-icon--ig"><img src="assets/icon-instagram.svg" alt="" width="13.75" height="13.75"></span>
+                <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="3.2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="8" r="2.8" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="11.4" cy="4.6" r="0.7" fill="currentColor"/></svg>
                 <a href="https://instagram.com/its_campus">its_campus</a>
             </li>
         </ul>
-
-        <a class="nav-link nav-link--wide" href="#">
-            <span>TERM OF SERVICE</span>
-            <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
-        </a>
-
-        <img class="ornament ornament--footer" src="assets/ornament.svg" alt="">
+        <div class="footer-motif" aria-hidden="true"></div>
     </footer>
+</div>
+<script>
+    const nav = document.querySelector(".side-nav");
+    const page = document.querySelector(".page");
+    const footer = document.querySelector("footer");
+    const START = 123;
+    const FOOTER_PAD = 41;
+    const NAV_H = 30 * 3 + 27 * 2;
+
+    function apply(dy) {
+        nav.style.left = Math.max(12, page.getBoundingClientRect().left + 35) + "px";
+        nav.style.transform = "translate3d(0," + dy + "px,0)";
+    }
+
+    function measure() {
+        if (window.matchMedia("(max-width: 900px)").matches) {
+            nav.style.left = "";
+            nav.style.transform = "";
+            return;
+        }
+
+        const footerBox = footer.getBoundingClientRect();
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const p = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+        const dockDocY = footerBox.top + window.scrollY + FOOTER_PAD;
+        const travelViewY = START + (dockDocY - START) * p - window.scrollY;
+        const dockY = footerBox.top + FOOTER_PAD - START;
+        const navHeight = nav.offsetHeight || NAV_H;
+        const maxViewY = window.innerHeight - navHeight;
+        const approachY = Math.min(Math.max(travelViewY, 0), maxViewY);
+        const visibleFooter = window.innerHeight - footerBox.top;
+        let t = Math.max(0, Math.min(1, visibleFooter / (FOOTER_PAD + navHeight)));
+        t = t * t * (3 - 2 * t);
+        const viewY = approachY + (START + dockY - approachY) * t;
+        apply((t < 1 ? Math.min(viewY, maxViewY) : viewY) - START);
+    }
+
+    function loop() {
+        measure();
+        requestAnimationFrame(loop);
+    }
+
+    measure();
+    requestAnimationFrame(loop);
+    addEventListener("scroll", measure, { passive: true });
+    addEventListener("resize", measure);
+    addEventListener("load", measure);
+</script>
 </body>
 </html>
