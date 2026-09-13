@@ -3,17 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document Title</title>
-    <!-- Link external CSS files here -->
-    <link rel="stylesheet" href="style.css">
+    <title>SENO — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Momo+Trust+Display&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/cv.css">
 </head>
 <body>
+    <header class="hero">
+        <nav class="rail" aria-label="Primary">
+            <a class="nav-link" href="index.html">
+                <span>HOME</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+            <a class="nav-link" href="cv.html" aria-current="page">
+                <span>CV</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+            <a class="nav-link" href="contact.html">
+                <span>CONTACT</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+        </nav>
 
-    <!-- Visible website content goes here -->
-    <h1>Hello, World!</h1>
+        <p class="section-tag">{ HERO }</p>
 
-    <!-- Link external JavaScript files here -->
-    <script src="script.js"></script>
+        <div class="hero-photo">
+            <img src="assets/hero.png" alt="Seno mascot flying in front of a campus building">
+        </div>
+
+        <div class="hero-copy">
+            <h1>Advancing<br>Humanity</h1>
+            <p class="hero-kicker">Still one step at a time*</p>
+            <div class="quote">
+                <img class="quote-mark quote-mark--tl" src="assets/corner.svg" alt="" width="17.5" height="17.5">
+                <p>The official version of me. Short, neat, and slightly impressive. I even have <span class="accent">awards</span> now. Cute.</p>
+                <img class="quote-mark quote-mark--br" src="assets/corner.svg" alt="" width="17.5" height="17.5">
+            </div>
+            <img class="ornament ornament--hero" src="assets/ornament.svg" alt="">
+        </div>
+    </header>
+
+    <main class="about">
+        <nav class="rail" aria-label="Primary">
+            <a class="nav-link" href="index.html">
+                <span>HOME</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+            <a class="nav-link" href="cv.html" aria-current="page">
+                <span>CV</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+            <a class="nav-link" href="contact.html">
+                <span>CONTACT</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+        </nav>
+
+        <div class="about-left">
+            <h2>About<br>Me</h2>
+            <p class="section-tag section-tag--cv">{ CV }</p>
+
+            <h3>Education</h3>
+            <ul class="cv-list">
+                <li>
+                    <span class="cv-date">2022-2025</span>
+                    <span class="cv-title">SMAN 67 SURABAYA</span>
+                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
+                </li>
+                <li class="cv-list__tall">
+                    <span class="cv-date">2022-2025</span>
+                    <span class="cv-title">INSTITUT TEKNOLOGI<br>SEPULUH NOPEMBER</span>
+                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
+                </li>
+            </ul>
+
+            <h3 class="experience-heading">Experience</h3>
+            <ul class="cv-list">
+                <li class="cv-list__tall">
+                    <span class="cv-date">APR 2026-<br>NOW</span>
+                    <span class="cv-title">CAMPUS INFLUENCER</span>
+                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="about-center">
+            <div class="portrait">
+                <img src="assets/seno.png" alt="Portrait of Seno mascot">
+            </div>
+            <h3 class="portrait-name">SENO</h3>
+            <div class="portrait-meta">
+                <span>+62 6767 6767 67</span>
+                <span class="portrait-meta__divider" aria-hidden="true"></span>
+                <span>Namaemail@gmail.com</span>
+            </div>
+        </div>
+
+        <div class="about-right">
+            <h3>Skills</h3>
+            <ul class="cv-list">
+                <li>
+                    <span class="cv-title">PUBLIC COMMUNICATION</span>
+                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
+                </li>
+                <li>
+                    <span class="cv-title">COLLABORATION</span>
+                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
+                </li>
+                <li>
+                    <span class="cv-title">CAMPAIGN MESSAGING</span>
+                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
+                </li>
+            </ul>
+
+            <h3 class="awards-heading">Certification /<br>Awards</h3>
+            <ul class="cv-list cv-list--award">
+                <li>
+                    <span class="cv-title">Official Mascot</span>
+                    <span class="chevron"><img src="assets/chevron-down.svg" alt="" width="9" height="5"></span>
+                    <p class="cv-note">Institut Teknologi Sepuluh Nopember, 2025</p>
+                </li>
+            </ul>
+
+            <img class="ornament ornament--about" src="assets/ornament.svg" alt="">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <nav class="rail" aria-label="Footer">
+            <a class="nav-link" href="index.html">
+                <span>HOME</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+            <a class="nav-link" href="cv.html" aria-current="page">
+                <span>CV</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+            <a class="nav-link" href="contact.html">
+                <span>CONTACT</span>
+                <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+            </a>
+        </nav>
+
+        <img class="wordmark" src="assets/wordmark.png" alt="SENO">
+
+        <ul class="footer-contact">
+            <li>
+                <span class="footer-icon footer-icon--web"><img src="assets/icon-web.svg" alt="" width="13" height="13"></span>
+                <a href="https://www.its.ac.id">www.its.ac.id</a>
+            </li>
+            <li>
+                <span class="footer-icon footer-icon--phone"><img src="assets/icon-phone.svg" alt="" width="12.67" height="12.67"></span>
+                <a href="tel:+626767676767">+62 6767 6767 67</a>
+            </li>
+            <li>
+                <span class="footer-icon footer-icon--ig"><img src="assets/icon-instagram.svg" alt="" width="13.75" height="13.75"></span>
+                <a href="https://instagram.com/its_campus">its_campus</a>
+            </li>
+        </ul>
+
+        <a class="nav-link nav-link--wide" href="#">
+            <span>TERM OF SERVICE</span>
+            <span class="nav-arrow"><img src="assets/arrow.svg" alt="" width="6" height="6"></span>
+        </a>
+
+        <img class="ornament ornament--footer" src="assets/ornament.svg" alt="">
+    </footer>
 </body>
 </html>
